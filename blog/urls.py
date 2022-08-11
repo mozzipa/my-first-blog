@@ -12,4 +12,6 @@ from . import views
 # URL에 고유한 이름을 붙여, 외우고 부르기 쉽게 만들어야 해요.
 urlpatterns = [
     path('',views.post_list,name='post_list'), 
+    # post/<int:pk/>/는 URL 패턴
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]
