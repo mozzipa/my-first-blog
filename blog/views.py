@@ -12,6 +12,9 @@ def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request,'blog/post_list.html',{'posts':posts})
 
+# base.html에서 post_detail link를 활성화하면, urls.py를 통해서 해당 url을 확인한다.
+# urls.py 는 views.py에 post_detail 함수가 있다고 선언해주고,
+# views.py에서 post_detail을 위해 pk 값을 받고 post_detail.html을 연다.
 def post_detail(request, pk):
-    post =get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html',{'post':post})
