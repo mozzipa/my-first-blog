@@ -10,6 +10,7 @@ from . import views
 # 뷰의 이름과 같을 수도 완전히 다를 수도 있습니다. 
 # 이름을 붙인 URL은 프로젝트의 후반에 사용할 거예요. 그러니 앱의 각 URL마다 이름 짓는 것은 중요합니다. 
 # URL에 고유한 이름을 붙여, 외우고 부르기 쉽게 만들어야 해요.
+# url 이름을 보고 views.py에서 def를 찾아서, 해당 html로 이동한다.
 urlpatterns = [
     path('',views.post_list,name='post_list'), 
     # post/<int:pk/>/는 URL 패턴
