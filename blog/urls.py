@@ -15,4 +15,7 @@ urlpatterns = [
     path('',views.post_list,name='post_list'), 
     # post/<int:pk/>/는 URL 패턴
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    # post_new를 불러오기 위함.
+    path('post/new/',views.post_new, name='post_new'),
+    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 ]
